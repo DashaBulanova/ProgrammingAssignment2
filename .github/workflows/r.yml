@@ -23,5 +23,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Running migration to ${{ github.event.deployment.environment }}
+      - name: Running migration to ${{ jobs.build.environment }}
         run: echo ${{ github.event.deployment.environment }}, secret = ${{ secrets.TEST }}
